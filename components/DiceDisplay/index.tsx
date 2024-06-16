@@ -50,11 +50,10 @@ export default function DiceDisplay() {
             <Die
               variant="building-shape"
               side="right"
-              // face="compass-right"
               face={dieFaces["building-shape-die-right"]}
             />
           </div>
-          <Die variant="building-type" />
+          <Die variant="building-type" face={dieFaces["building-type-die"]} />
         </div>
       ) : null}
 

@@ -1,0 +1,177 @@
+html {
+  --color-name-white: 0, 0%, 100%;
+  --color-name-royal-blue: 215, 100%, 20%;
+  --color-name-yale-blue: 212, 98%, 25%;
+  --color-name-battleship-gray: 216, 2%, 59%;
+  --color-name-timberwolf: 220, 3%, 83%;
+
+  --blue-die-color-outer: hsl(var(--color-name-royal-blue));
+  --blue-die-color-inner: hsl(var(--color-name-yale-blue));
+  --blue-die-color-icon: hsl(var(--color-name-white));
+  --blue-die-color-circle: hsl(var(--color-name-battleship-gray));
+  --white-die-color-outer: hsl(var(--color-name-timberwolf));
+  --white-die-color-inner: hsl(var(--color-name-white));
+
+  --die-border-radius: 0.25em;
+}
+
+.die {
+  width: 8em;
+  height: 8em;
+  padding: 0.5em;
+}
+
+/* Gray circle */
+.circle {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background-color: var(--blue-die-color-circle);
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+
+  &.left {
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  &.right {
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Variant */
+.building-shape {
+  background-color: var(--blue-die-color-outer);
+  border-radius: var(--die-border-radius);
+
+  & > div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.8em;
+    background-color: var(--blue-die-color-inner);
+    border-radius: var(--die-border-radius);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* Left shape die */
+  & .corner-left .block:nth-child(2) {
+    background-color: transparent;
+  }
+
+  & .one-horizontal-left .block {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      background-color: transparent;
+    }
+  }
+
+  & .two-horizontal-left .block {
+    &:nth-child(1),
+    &:nth-child(2) {
+      background-color: transparent;
+    }
+  }
+
+  & .two-vertical-left .block {
+    &:nth-child(1),
+    &:nth-child(3) {
+      background-color: transparent;
+    }
+  }
+
+  /* Right shape die */
+  & .one-horizontal-right .block {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(4) {
+      background-color: transparent;
+    }
+  }
+
+  & .two-horizontal-right .block {
+    &:nth-child(1),
+    &:nth-child(2) {
+      background-color: transparent;
+    }
+  }
+
+  & .two-vertical-right .block {
+    &:nth-child(2),
+    &:nth-child(4) {
+      background-color: transparent;
+    }
+  }
+
+  & .blank-right .block {
+    background-color: transparent;
+  }
+
+  & .compass {
+    position: absolute;
+    display: none;
+  }
+
+  & .compass-right {
+    & .compass {
+      display: block;
+      width: 100%;
+
+      & + .circle {
+        display: none;
+      }
+    }
+
+    & svg {
+      color: white;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & .compass-right .block {
+    background-color: transparent;
+  }
+}
+
+/* Buidling type */
+.building-type {
+  background-color: var(--white-die-color-outer);
+  border-radius: var(--die-border-radius);
+
+  & > div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.25em;
+    background-color: var(--white-die-color-inner);
+    border-radius: var(--die-border-radius);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  & .circle {
+    display: none;
+  }
+
+  & .compass {
+    display: none;
+  }
+}
+
+/* Building block */
+.block {
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue-die-color-icon);
+  border-radius: var(--die-border-radius);
+}

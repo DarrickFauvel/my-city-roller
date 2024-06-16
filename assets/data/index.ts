@@ -4,28 +4,26 @@ const dice = [
     faces: [
       "corner-left",
       "one-horizontal-left",
-      "two-horizontal-left",
       "one-horizontal-left",
       "two-vertical-left",
       "two-vertical-left",
+      "two-horizontal-left",
     ],
   },
-
   {
     name: "building-shape-die-right",
     faces: [
+      "one-horizontal-right",
       "two-horizontal-right",
       "two-vertical-right",
-      "one-horizontal-right",
       "two-vertical-right",
       "blank-right",
       "compass-right",
     ],
   },
-
   {
     name: "building-type-die",
-    faces: ["solid", "lined", "crossed"],
+    faces: ["solid", "solid", "lined", "lined", "crossed", "crossed"],
   },
 ]
 

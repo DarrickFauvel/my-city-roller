@@ -17,24 +17,25 @@ export default function DiceDisplay() {
   })
   const [diceRolled, setDiceRolled] = useState(false)
 
-  const rollDie = (die: Die) => {
-    const faces = die.faces
-    const randomIndex = Math.floor(Math.random() * faces.length)
-    return faces[randomIndex]
+  const getRolledDice = async () => {
+    const res = await fetch("http://localhost:3000/api/roll")
+    const data = await res.json()
+    return data
   }
 
-  const handleClick = () => {
-    dice.map((die) => {
+  const handleClick = async () => {
+    const rolledDice = await getRolledDice()
+
+    for (const [key, value] of Object.entries(rolledDice)) {
       setDieFaces((prev) => {
         return {
           ...prev,
-          [die.name]: rollDie(die),
+          [key]: value,
         }
       })
-    })
+    }
 
     setDiceRolled(true)
-    console.log(dieFaces)
   }
 
   return (

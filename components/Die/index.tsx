@@ -1,8 +1,12 @@
-import { PropsWithChildren } from "react"
-
 import "../../assets/css/dice.css"
 
-export default function Die(props: PropsWithChildren) {
+type DieProps = {
+  variant: string
+  side?: string
+  face: string | null
+}
+
+export default function Die(props: DieProps) {
   const { variant, side, face } = props
 
   return (

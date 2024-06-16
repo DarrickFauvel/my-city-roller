@@ -6,12 +6,6 @@ type Die = {
   faces: string[]
 }
 
-type RolledDice = {
-  "building-shape-die-left": string
-  "building-shape-die-right": string
-  "builing-type-die": string
-}
-
 export async function GET(_request: NextRequest) {
   const rollDie = (die: Die) => {
     const faces = die.faces

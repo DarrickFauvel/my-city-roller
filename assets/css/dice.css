@@ -148,23 +148,11 @@ html {
 
   & > div {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1.25em;
+
     background-color: var(--white-die-color-inner);
     border-radius: var(--die-border-radius);
     width: 100%;
     height: 100%;
-    overflow: hidden;
-  }
-
-  & .circle {
-    display: none;
-  }
-
-  & .compass {
-    display: none;
   }
 }
 

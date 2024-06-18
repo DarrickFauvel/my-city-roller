@@ -13,7 +13,7 @@ export async function GET(_request: NextRequest) {
     return faces[randomIndex]
   }
 
-  const rolledDice = {}
+  const rolledDice: any = {}
 
   dice.forEach((die) => {
     rolledDice[die.name] = rollDie(die)

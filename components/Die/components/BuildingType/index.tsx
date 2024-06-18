@@ -1,3 +1,8 @@
+import faceSolid from "@/assets/images/house-solid.svg"
+import faceLined from "@/assets/images/house-lined.svg"
+import faceCrossed from "@/assets/images/house-crossed.svg"
+import Image from "next/image"
+
 type BuildingTypeProps = {
   face: string
 }
@@ -5,19 +10,18 @@ type BuildingTypeProps = {
 export default function BuildingType(props: BuildingTypeProps) {
   const { face } = props
 
+  const faceImageSrc =
+    face === "solid" ? faceSolid : face === "lined" ? faceLined : faceCrossed
+
   return (
     <span className="building-type">
-      <svg
-        className="house-empty"
-        xmlns="http://www.w3.org/2000/svg"
-        width="1em"
-        height="1em"
-        viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M19.75 10a.75.75 0 0 0-1.5 0zm-14 0a.75.75 0 0 0-1.5 0zm14.72 2.53a.75.75 0 1 0 1.06-1.06zM12 3l.53-.53a.75.75 0 0 0-1.06 0zm-9.53 8.47a.75.75 0 1 0 1.06 1.06zM7 21.75h10v-1.5H7zM19.75 19v-9h-1.5v9zm-14 0v-9h-1.5v9zm15.78-7.53l-9-9l-1.06 1.06l9 9zm-10.06-9l-9 9l1.06 1.06l9-9zM17 21.75A2.75 2.75 0 0 0 19.75 19h-1.5c0 .69-.56 1.25-1.25 1.25zm-10-1.5c-.69 0-1.25-.56-1.25-1.25h-1.5A2.75 2.75 0 0 0 7 21.75z"
-        />
-      </svg>
+      <Image
+        className="mt-0 p-3"
+        src={faceImageSrc}
+        alt=""
+        width={500}
+        height={500}
+      />
     </span>
   )
 }

@@ -46,7 +46,7 @@
        id="path44"
        transform="translate(1.1041667e-6)" /></g><g
      id="g6"
-     style="display:none"
+     style="display:inline"
      transform="translate(-102.88633,-147.69101)"><g
        id="g37"
        style="display:inline"
@@ -65,7 +65,7 @@
          y="29.944887"
          transform="rotate(45)" /></g></g><g
      id="g39"
-     style="display:inline"
+     style="display:none"
      transform="translate(-102.88633,-147.69101)"><path
        style="display:inline;fill:url(#pattern43);fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1"
        d="m 103.58004,149.79115 1.87223,-1.82657 1.84612,1.78097 -0.11088,2.78546 h -3.44765 z"

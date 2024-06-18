@@ -35,7 +35,7 @@
    id="rect197" />
     </pattern></defs><g
      id="layer1"
-     style="display:none"
+     style="display:inline"
      transform="translate(-102.88633,-147.69101)"><path
        style="display:inline;fill:#013b7f;fill-opacity:1;stroke:#013b7f;stroke-width:0.465;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
        d="m 104.79015,150.22496 1.41558,1.41559"
@@ -65,7 +65,7 @@
          y="29.944887"
          transform="rotate(45)" /></g></g><g
      id="g39"
-     style="display:inline"
+     style="display:none"
      transform="translate(-102.88633,-147.69101)"><path
        style="display:inline;fill:url(#pattern43);fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1"
        d="m 103.58004,149.79115 1.87223,-1.82657 1.84612,1.78097 -0.11088,2.78546 h -3.44765 z"

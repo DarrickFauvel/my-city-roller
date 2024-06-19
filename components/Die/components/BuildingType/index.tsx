@@ -4,7 +4,7 @@ import faceCrossed from "@/assets/images/house-crossed.svg"
 import Image from "next/image"
 
 type BuildingTypeProps = {
-  face: string
+  face: string | null
 }
 
 export default function BuildingType(props: BuildingTypeProps) {

@@ -54,21 +54,20 @@ export default function DiceDisplay() {
           <Die variant="building-type" face={dieFaces["building-type-die"]} />
         </div>
       ) : (
-        <div className="flex gap-8">
+        <div className="gap-8">
+          <h2>Welcome to My City Roller!</h2>
           <Image
-            className="w-32"
+            className="float-left w-32"
             src={BoxTopImage}
             width={100}
             height={100}
             alt="Game box top"
           />
-          <div>
-            <h2>Welcome to My City Roller!</h2>
-            <p>
-              This is an online dice roller for the wonderfully fun roll & write
-              game, <strong>My City: Roll & Build</strong>.
-            </p>
-          </div>
+          <p className="float-right">
+            This is an online dice roller for the wonderfully fun roll & write
+            game, <strong>My City: Roll & Build</strong>.
+          </p>
+          <br className="clear-both" />
         </div>
       )}
 

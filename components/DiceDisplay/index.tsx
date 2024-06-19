@@ -3,6 +3,7 @@ import { useState } from "react"
 import Button from "../Button"
 import dice from "@/assets/data"
 import Die from "../Die"
+import getRolledDice from "@/lib/getRolledDice"
 
 type Die = {
   name: string
@@ -16,12 +17,6 @@ export default function DiceDisplay() {
     "building-type-die": null,
   })
   const [diceRolled, setDiceRolled] = useState(false)
-
-  const getRolledDice = async () => {
-    const res = await fetch("/api/roll", { next: { revalidate: 1 } })
-    const data = await res.json()
-    return data
-  }
 
   const handleClick = async () => {
     const rolledDice = await getRolledDice()

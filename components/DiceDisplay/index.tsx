@@ -65,7 +65,7 @@ export default function DiceDisplay() {
             <h2>Welcome to My City Roller!</h2>
             <p>
               This is an online dice roller for the wonderfully fun roll & write
-              game, My City: Roll & Build.
+              game, <strong>My City: Roll & Build</strong>.
             </p>
           </div>
         </div>

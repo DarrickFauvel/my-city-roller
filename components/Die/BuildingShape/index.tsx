@@ -1,5 +1,5 @@
 type BuildingShapeProps = {
-  side: string
+  side: string | undefined
 }
 
 export default function BuildingShape(props: BuildingShapeProps) {

@@ -4,7 +4,7 @@ import BuildingType from "./components/BuildingType"
 
 type DieProps = {
   variant: string
-  side?: string
+  side?: string | undefined
   face: string | null
 }
 

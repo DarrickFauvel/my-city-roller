@@ -56,9 +56,10 @@ export default function DiceDisplay() {
       ) : (
         <div className="flex gap-8">
           <Image
+            className="w-32"
             src={BoxTopImage}
-            width={200}
-            height={200}
+            width={100}
+            height={100}
             alt="Game box top"
           />
           <div>

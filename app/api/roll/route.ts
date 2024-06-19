@@ -6,7 +6,9 @@ type Die = {
   faces: string[]
 }
 
-export async function GET(_request: NextRequest) {
+export async function GET(request: Request) {
+  console.log(request.url)
+
   const rollDie = (die: Die) => {
     const faces = die.faces
     const randomIndex = Math.floor(Math.random() * faces.length)

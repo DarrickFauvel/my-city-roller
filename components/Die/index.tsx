@@ -1,4 +1,4 @@
-import "../../assets/css/dice.css"
+import "@/assets/css/dice.css"
 import BuildingShape from "./BuildingShape"
 import BuildingType from "./components/BuildingType"
 

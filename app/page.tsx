@@ -11,9 +11,9 @@ export default function Home() {
 
   return (
     <main className="prose">
-      <Header />
+      <Header showDiceRolled={showDiceRolled} />
 
-      <DiceDisplay />
+      <DiceDisplay showDiceRolled={showDiceRolled} diceRolled={diceRolled} />
     </main>
   )
 }

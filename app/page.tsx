@@ -1,10 +1,11 @@
 import "@/assets/css/dice.css"
 import DiceDisplay from "@/components/DiceDisplay"
+import Header from "@/components/Header"
 
 export default function Home() {
   return (
-    <main className="prose p-8">
-      <h1>My City Roller</h1>
+    <main className="prose">
+      <Header />
 
       <DiceDisplay />
     </main>

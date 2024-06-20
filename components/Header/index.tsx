@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between bg-blue-200 px-8">
       <span className="text-2xl font-bold">My City Roller</span>
-      <div className="flex gap-4">
+      <div className="flex gap-3">
         <Image
           className="shadow-lg -rotate-12"
           src={BlueDieLeft}

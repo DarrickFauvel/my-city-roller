@@ -41,7 +41,7 @@ export default function DiceDisplay(props: DiceDisplayProps) {
   }
 
   return (
-    <div className="px-8 flex flex-col items-center">
+    <div className="mt-16 px-8 flex flex-col items-center">
       {diceRolled ? (
         <div className="flex flex-col items-center gap-8 py-8">
           <div className="flex gap-2">

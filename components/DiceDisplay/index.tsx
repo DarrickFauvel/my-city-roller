@@ -22,7 +22,6 @@ export default function DiceDisplay(props: DiceDisplayProps) {
     "building-shape-die-right": null,
     "building-type-die": null,
   })
-  const [diceRolled, setDiceRolled] = useState(false)
 
   const handleClick = async () => {
     const rolledDice = await getRolledDice()

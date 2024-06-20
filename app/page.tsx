@@ -1,6 +1,4 @@
-import Image from "next/image"
-import "../assets/css/dice.css"
-import Button from "@/components/Button"
+import "@/assets/css/dice.css"
 import DiceDisplay from "@/components/DiceDisplay"
 
 export default function Home() {

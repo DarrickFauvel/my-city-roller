@@ -10,7 +10,7 @@ export default function Home() {
   const showDiceRolled = (boolean: boolean) => setDiceRolled(boolean)
 
   return (
-    <main className="prose bg-cyan-50">
+    <main className="prose relative bg-cyan-50 grid">
       <Header showDiceRolled={showDiceRolled} />
 
       <DiceDisplay showDiceRolled={showDiceRolled} diceRolled={diceRolled} />

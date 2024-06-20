@@ -49,7 +49,7 @@ export default function Header(props: HeaderProps) {
         </svg>
       </div>
       <span
-        className={`${cormorant.className} text-white [text-shadow:_0_1px_15px_white] text-3xl sm:text-4xl font-bold sm:text-4xl hover:cursor-pointer animate-fade-in`}
+        className={`${cormorant.className} text-white [text-shadow:_0_1px_15px_white] text-3xl sm:text-4xl font-bold hover:cursor-pointer animate-fade-in`}
         onClick={() => showDiceRolled(false)}>
         My City Roller
       </span>

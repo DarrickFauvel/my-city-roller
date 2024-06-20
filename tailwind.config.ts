@@ -67,14 +67,38 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "roll-in-blurred-right": {
+        "roll-in-blurred-right-1": {
           "0%": {
             transform: "translateX(1000px) rotate(720deg)",
             filter: "blur(50px)",
             opacity: "0",
           },
           to: {
-            transform: "translateX(0) rotate(0deg)",
+            transform: "translateX(0) rotate(-9deg)",
+            filter: "blur(0)",
+            opacity: "1",
+          },
+        },
+        "roll-in-blurred-right-2": {
+          "0%": {
+            transform: "translateX(1000px) rotate(720deg)",
+            filter: "blur(50px)",
+            opacity: "0",
+          },
+          to: {
+            transform: "translateX(0) rotate(3deg)",
+            filter: "blur(0)",
+            opacity: "1",
+          },
+        },
+        "roll-in-blurred-right-3": {
+          "0%": {
+            transform: "translateX(1000px) rotate(720deg)",
+            filter: "blur(50px)",
+            opacity: "0",
+          },
+          to: {
+            transform: "translateX(0) rotate(-12deg)",
             filter: "blur(0)",
             opacity: "1",
           },
@@ -91,8 +115,12 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "roll-in-blurred-right":
-          "roll-in-blurred-right 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000)   both",
+        "roll-in-blurred-right-1":
+          "roll-in-blurred-right-1 0.65s cubic-bezier(0.230, 1.100, 0.320, 1.000)   both",
+        "roll-in-blurred-right-2":
+          "roll-in-blurred-right-2 0.65s cubic-bezier(0.230, 1.100, 0.320, 1.000)   both",
+        "roll-in-blurred-right-3":
+          "roll-in-blurred-right-3 0.65s cubic-bezier(0.230, 1.100, 0.320, 1.000)   both",
         "fade-in":
           "fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
       },

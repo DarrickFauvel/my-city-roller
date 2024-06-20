@@ -9,18 +9,21 @@ export default function Header() {
       <span className="text-2xl font-bold">My City Roller</span>
       <div className="flex gap-4">
         <Image
+          className="shadow-lg -rotate-12"
           src={BlueDieLeft}
           width={30}
           height={30}
           alt="blue building shape die #1"
         />
         <Image
+          className="shadow-lg rotate-3"
           src={BlueDieRight}
           width={30}
           height={30}
           alt="blue building shape die #2"
         />
         <Image
+          className="shadow-lg -rotate-45 scale-110"
           src={WhiteDie}
           width={30}
           height={30}

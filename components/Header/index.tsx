@@ -15,7 +15,7 @@ export default function Header(props: HeaderProps) {
 
   return (
     <header
-      className={`flex items-center justify-between bg-gradient-to-b from-cyan-700 to-cyan-200 px-8`}>
+      className={`flex items-center justify-between bg-gradient-to-b from-cyan-900 to-cyan-300 px-8`}>
       <span
         className={`${cormorant.className} text-white text-3xl sm:text-4xl font-semibold sm:text-4xl hover:cursor-pointer animate-fade-in`}
         onClick={() => showDiceRolled(false)}>

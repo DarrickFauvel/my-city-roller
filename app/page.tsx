@@ -6,6 +6,9 @@ import { useState } from "react"
 
 export default function Home() {
   const [diceRolled, setDiceRolled] = useState(false)
+
+  const showDiceRolled = (boolean: boolean) => setDiceRolled(boolean)
+
   return (
     <main className="prose">
       <Header />

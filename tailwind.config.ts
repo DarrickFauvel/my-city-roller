@@ -120,6 +120,16 @@ const config = {
             transform: "translate(10px, -5px) scale(300%)",
           },
         },
+        "rotate-center": {
+          "0%": {
+            transform: "rotate(0) scale(0.5)",
+            opacity: "0",
+          },
+          to: {
+            transform: "rotate(360deg) scale(1)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -133,6 +143,8 @@ const config = {
         "fade-in":
           "fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
         "float-side-to-side": "float-side-to-side 10s infinite alternate",
+        "rotate-center":
+          "rotate-center 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955)   both",
       },
       transitionDelay: {
         "1500": "1500ms",

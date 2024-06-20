@@ -16,7 +16,7 @@ export default function Header(props: HeaderProps) {
   return (
     <header
       className={`fixed top-0 w-full flex items-center justify-between bg-gradient-to-b from-cyan-900 to-cyan-300 px-8`}>
-      <div className="absolute -bottom-1 right-1 scale-[300%]">
+      <div className="absolute -bottom-1 right-1 animate-float-side-to-side">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
@@ -32,7 +32,7 @@ export default function Header(props: HeaderProps) {
           />
         </svg>
       </div>
-      <div className="absolute top-1 left-1 scale-[300%]">
+      <div className="absolute top-1 left-1  animate-float-side-to-side">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"

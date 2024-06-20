@@ -63,7 +63,7 @@ export default function DiceDisplay(props: DiceDisplayProps) {
             </DelayedComponent>
           </div>
 
-          <DelayedComponent timeoutValue={1000}>
+          <DelayedComponent timeoutValue={3000}>
             <Die variant="building-type" face={dieFaces["building-type-die"]} />
           </DelayedComponent>
         </div>

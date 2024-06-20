@@ -16,7 +16,7 @@ type Die = {
   faces: string[]
 }
 
-export default function DiceDisplay() {
+export default function DiceDisplay(props: DiceDisplayProps) {
   const [dieFaces, setDieFaces] = useState({
     "building-shape-die-left": null,
     "building-shape-die-right": null,

@@ -36,9 +36,9 @@ export default function DiceDisplay() {
   }
 
   return (
-    <div className="px-4">
+    <div className="px-8">
       {diceRolled ? (
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 py-8">
           <div className="flex gap-2">
             <Die
               variant="building-shape"

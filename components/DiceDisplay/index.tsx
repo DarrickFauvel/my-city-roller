@@ -5,6 +5,7 @@ import Die from "../Die"
 import getRolledDice from "@/lib/getRolledDice"
 import Image from "next/image"
 import BoxTopImage from "@/assets/images/my-city-roll-and-build-box-top.webp"
+import DelayedComponent from "../DelayedComponent"
 
 type DiceDisplayProps = {
   showDiceRolled: (boolean: boolean) => void
@@ -45,18 +46,26 @@ export default function DiceDisplay(props: DiceDisplayProps) {
       {diceRolled ? (
         <div className="flex flex-col items-center gap-8 py-8">
           <div className="flex gap-2">
-            <Die
-              variant="building-shape"
-              side="left"
-              face={dieFaces["building-shape-die-left"]}
-            />
-            <Die
-              variant="building-shape"
-              side="right"
-              face={dieFaces["building-shape-die-right"]}
-            />
+            <DelayedComponent timeoutValue={1000}>
+              <Die
+                variant="building-shape"
+                side="left"
+                face={dieFaces["building-shape-die-left"]}
+              />
+            </DelayedComponent>
+
+            <DelayedComponent timeoutValue={2000}>
+              <Die
+                variant="building-shape"
+                side="right"
+                face={dieFaces["building-shape-die-right"]}
+              />
+            </DelayedComponent>
           </div>
-          <Die variant="building-type" face={dieFaces["building-type-die"]} />
+
+          <DelayedComponent timeoutValue={1000}>
+            <Die variant="building-type" face={dieFaces["building-type-die"]} />
+          </DelayedComponent>
         </div>
       ) : (
         <div className="gap-8">

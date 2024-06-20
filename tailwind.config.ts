@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc"
 import type { Config } from "tailwindcss"
 
 const config = {
@@ -111,6 +112,14 @@ const config = {
             opacity: "1",
           },
         },
+        "float-side-to-side": {
+          "0%": {
+            transform: "translate(0, 0) scale(300%)",
+          },
+          "100%": {
+            transform: "translate(10px, -5px) scale(300%)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -123,6 +132,7 @@ const config = {
           "roll-in-blurred-right-3 0.65s cubic-bezier(0.230, 1.100, 0.320, 1.000)   both",
         "fade-in":
           "fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
+        "float-side-to-side": "float-side-to-side 10s infinite alternate",
       },
       transitionDelay: {
         "1500": "1500ms",

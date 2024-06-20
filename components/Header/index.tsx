@@ -2,6 +2,9 @@ import Image from "next/image"
 import BlueDieLeft from "@/assets/images/blue-die-left.webp"
 import BlueDieRight from "@/assets/images/blue-die-right.webp"
 import WhiteDie from "@/assets/images/white-die.webp"
+import { Cormorant } from "next/font/google"
+
+const cormorant = Cormorant({ subsets: ["latin"] })
 
 type HeaderProps = {
   showDiceRolled: (boolean: boolean) => void
@@ -13,7 +16,7 @@ export default function Header(props: HeaderProps) {
   return (
     <header className="flex items-center justify-between bg-blue-200 px-8">
       <span
-        className="text-2xl font-bold hover:cursor-pointer"
+        className={`${cormorant.className} text-white text-4xl font-semibold sm:text-4xl hover:cursor-pointer animate-fade-in`}
         onClick={() => showDiceRolled(false)}>
         My City Roller
       </span>

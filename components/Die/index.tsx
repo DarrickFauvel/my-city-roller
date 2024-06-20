@@ -12,7 +12,7 @@ export default function Die(props: DieProps) {
   const { variant, side, face } = props
 
   return (
-    <div className={`die ${variant} ${side || null}`}>
+    <div className={`die ${variant} ${side || null} animate-rotate-center`}>
       <div className={`${face}`}>
         {variant === "building-shape" ? (
           <BuildingShape side={side} />

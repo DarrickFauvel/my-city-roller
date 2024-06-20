@@ -6,6 +6,11 @@ import getRolledDice from "@/lib/getRolledDice"
 import Image from "next/image"
 import BoxTopImage from "@/assets/images/my-city-roll-and-build-box-top.webp"
 
+type DiceDisplayProps = {
+  showDiceRolled: (boolean: boolean) => void
+  diceRolled: boolean
+}
+
 type Die = {
   name: string
   faces: string[]

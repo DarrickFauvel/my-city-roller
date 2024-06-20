@@ -32,7 +32,7 @@ export default function Header(props: HeaderProps) {
           />
         </svg>
       </div>
-      <div className="absolute top-1 left-1  animate-float-side-to-side">
+      <div className="absolute top-0 left-0  animate-float-side-to-side">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"

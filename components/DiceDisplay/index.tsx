@@ -1,7 +1,6 @@
 "use client"
 import { useState } from "react"
 import Button from "../Button"
-import dice from "@/assets/data"
 import Die from "../Die"
 import getRolledDice from "@/lib/getRolledDice"
 import Image from "next/image"

@@ -55,7 +55,7 @@ export default function DiceDisplay() {
         </div>
       ) : (
         <div className="gap-8">
-          <h2>Welcome to My City Roller!</h2>
+          <h2 className="text-balance">Welcome to My City Roller!</h2>
           <Image
             className="float-left w-32"
             src={BoxTopImage}

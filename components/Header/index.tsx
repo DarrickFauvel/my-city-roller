@@ -3,10 +3,20 @@ import BlueDieLeft from "@/assets/images/blue-die-left.webp"
 import BlueDieRight from "@/assets/images/blue-die-right.webp"
 import WhiteDie from "@/assets/images/white-die.webp"
 
-export default function Header() {
+type HeaderProps = {
+  showDiceRolled: (boolean: boolean) => void
+}
+
+export default function Header(props: HeaderProps) {
+  const { showDiceRolled } = props
+
   return (
     <header className="flex items-center justify-between bg-blue-200 px-8">
-      <span className="text-2xl font-bold">My City Roller</span>
+      <span
+        className="text-2xl font-bold hover:cursor-pointer"
+        onClick={() => showDiceRolled(false)}>
+        My City Roller
+      </span>
       <div className="flex gap-3">
         <Image
           className="shadow-lg -rotate-12"

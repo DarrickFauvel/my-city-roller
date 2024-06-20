@@ -17,6 +17,8 @@ type Die = {
 }
 
 export default function DiceDisplay(props: DiceDisplayProps) {
+  const { showDiceRolled, diceRolled } = props
+
   const [dieFaces, setDieFaces] = useState({
     "building-shape-die-left": null,
     "building-shape-die-right": null,
@@ -35,7 +37,7 @@ export default function DiceDisplay(props: DiceDisplayProps) {
       })
     }
 
-    setDiceRolled(true)
+    showDiceRolled(true)
   }
 
   return (

@@ -23,12 +23,11 @@ export default function DelayedComponent({
   return (
     <div>
       {isLoading ? (
-        <div className="w-full h-full flex justify-center items-center">
+        <div className="w-full h-full flex justify-center items-center text-cyan-300">
           <svg
-            className="scale-[250%]"
             xmlns="http://www.w3.org/2000/svg"
-            width="1em"
-            height="1em"
+            width="8em"
+            height="8em"
             viewBox="0 0 24 24">
             <path
               fill="currentColor"
@@ -37,7 +36,7 @@ export default function DelayedComponent({
               <animateTransform
                 attributeName="transform"
                 calcMode="spline"
-                dur="1.2s"
+                dur="1.25s"
                 keySplines=".52,.6,.25,.99"
                 repeatCount="indefinite"
                 type="translate"
@@ -47,7 +46,7 @@ export default function DelayedComponent({
                 additive="sum"
                 attributeName="transform"
                 calcMode="spline"
-                dur="1.2s"
+                dur="1.25s"
                 keySplines=".52,.6,.25,.99"
                 repeatCount="indefinite"
                 type="scale"
@@ -56,7 +55,7 @@ export default function DelayedComponent({
               <animate
                 attributeName="opacity"
                 calcMode="spline"
-                dur="1.2s"
+                dur="1.25s"
                 keySplines=".52,.6,.25,.99"
                 repeatCount="indefinite"
                 values="1;0"

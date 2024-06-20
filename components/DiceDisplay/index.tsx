@@ -44,7 +44,7 @@ export default function DiceDisplay(props: DiceDisplayProps) {
   return (
     <div className="mt-16 px-8 flex flex-col items-center">
       {diceRolled ? (
-        <div className="flex flex-col items-center gap-8 py-8">
+        <div className="flex flex-col items-center gap-8 pt-16 pb-8">
           <div className="flex gap-2">
             <DelayedComponent timeoutValue={1000}>
               <Die
@@ -63,7 +63,7 @@ export default function DiceDisplay(props: DiceDisplayProps) {
             </DelayedComponent>
           </div>
 
-          <DelayedComponent timeoutValue={1000}>
+          <DelayedComponent timeoutValue={3000}>
             <Die variant="building-type" face={dieFaces["building-type-die"]} />
           </DelayedComponent>
         </div>

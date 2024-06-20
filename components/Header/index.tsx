@@ -5,7 +5,7 @@ import WhiteDie from "@/assets/images/white-die.webp"
 
 export default function Header() {
   return (
-    <header className="flex gap-4 items-center justify-between bg-blue-200 px-8">
+    <header className="flex items-center justify-between bg-blue-200 px-8">
       <span className="text-2xl font-bold">My City Roller</span>
       <div className="flex gap-4">
         <Image

@@ -1,3 +1,4 @@
+"use client"
 import "@/assets/css/dice.css"
 import DiceDisplay from "@/components/DiceDisplay"
 import Header from "@/components/Header"

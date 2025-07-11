@@ -3,6 +3,7 @@ import BlueDieLeft from "@/assets/images/blue-die-left.webp"
 import BlueDieRight from "@/assets/images/blue-die-right.webp"
 import WhiteDie from "@/assets/images/white-die.webp"
 import { Cormorant } from "next/font/google"
+import Link from "next/link"
 
 const cormorant = Cormorant({ subsets: ["latin"] })
 
@@ -10,12 +11,14 @@ type HeaderProps = {
   showDiceRolled: (boolean: boolean) => void
 }
 
-export default function Header(props: HeaderProps) {
-  const { showDiceRolled } = props
+export default function Header(
+  // props: HeaderProps
+) {
+  // const { showDiceRolled } = props
 
   return (
     <header
-      className={`fixed top-0 w-full flex items-center justify-between bg-gradient-to-b from-blue-950 to-cyan-400 px-8`}>
+      className="fixed z-50 top-0 w-full flex items-center justify-between bg-gradient-to-b from-blue-950 to-cyan-400 px-8 h-20">
       <div className="absolute -bottom-1 right-1 animate-float-side-to-side">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -48,11 +51,12 @@ export default function Header(props: HeaderProps) {
           />
         </svg>
       </div>
-      <span
-        className={`${cormorant.className} text-white [text-shadow:_0_1px_15px_white] text-3xl sm:text-4xl font-bold hover:cursor-pointer animate-fade-in`}
-        onClick={() => showDiceRolled(false)}>
-        My City Roller
-      </span>
+      <Link href='/' className="no-underline underline-offset-4 hover:underline text-white">
+        <span
+          className={`${cormorant.className} text-white [text-shadow:_0_1px_15px_white] text-3xl sm:text-4xl font-bold hover:cursor-pointer animate-fade-in`}>
+          My City Roller
+        </span>
+      </Link>
       <div className="flex gap-3">
         <Image
           className="w-6 sm:w-12 outline outline-1 outline-slate-300 -rotate-12 animate-roll-in-blurred-right-1 transition delay-1000"

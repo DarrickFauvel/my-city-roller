@@ -1,11 +1,11 @@
 "use client"
 import { useState } from "react"
-import Button from "../Button"
-import Die from "../Die"
+import Button from "../button"
+import Die from "../die"
 import getRolledDice from "@/lib/getRolledDice"
 import Image from "next/image"
 import BoxTopImage from "@/assets/images/my-city-roll-and-build-box-top.webp"
-import DelayedComponent from "../DelayedComponent"
+import DelayedComponent from "../delayed-component"
 
 type DiceDisplayProps = {
   showDiceRolled: (boolean: boolean) => void

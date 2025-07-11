@@ -1,7 +1,7 @@
 "use client"
 import "@/assets/css/dice.css"
-import DiceDisplay from "@/components/DiceDisplay"
-import Header from "@/components/Header"
+import DiceDisplay from "@/components/dice-display"
+import Header from "@/components/header"
 import { useState } from "react"
 
 export default function Home() {

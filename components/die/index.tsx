@@ -1,6 +1,6 @@
 import "@/assets/css/dice.css"
-import BuildingShape from "./BuildingShape"
-import BuildingType from "./components/BuildingType"
+import BuildingShape from "./building-shape"
+import BuildingType from "./components/building-type"
 
 type DieProps = {
   variant: string

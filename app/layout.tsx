@@ -27,7 +27,7 @@ export default function RootLayout({
           <Header
           // showDiceRolled={showDiceRolled}
           />
-          <main className="prose relative bg-cyan-50 flex-1 overflow-y-auto pt-20">
+          <main className="prose relative bg-cyan-50 flex-1 overflow-y-auto pt-20 px-8">
             {children}
           </main>
           <Footer />

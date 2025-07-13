@@ -1,8 +1,11 @@
 "use client"
 
+import { useEffect, useState } from "react"
+
 import DelayedComponent from "@/components/delayed-component"
 import Die from "@/components/die"
-import { useState } from "react"
+import RollDiceButton from "@/components/roll-dice-button"
+import getRolledDice from "@/lib/getRolledDice"
 
 export default function RollPage() {
   const [dieFaces, setDieFaces] = useState({
@@ -10,6 +13,29 @@ export default function RollPage() {
     "building-shape-die-right": null,
     "building-type-die": null,
   })
+  const [rollCount, setRollCount] = useState(1)
+
+  useEffect(() => {
+    async function setRolledDice() {
+      const rolledDice = await getRolledDice()
+
+      for (const [key, value] of Object.entries(rolledDice)) {
+        setDieFaces((prevDieFaces) => {
+          return {
+            ...prevDieFaces,
+            [key]: value,
+          }
+        })
+      }
+    }
+
+    setRolledDice()
+    console.log(rollCount)
+  }, [rollCount])
+
+  const handleClick = () => {
+    setRollCount((prevRollCount) => prevRollCount + 1)
+  }
 
   return (
     <div className="flex flex-col items-center gap-8 pt-16 pb-8">
@@ -34,6 +60,8 @@ export default function RollPage() {
       <DelayedComponent timeoutValue={3000}>
         <Die variant="building-type" face={dieFaces["building-type-die"]} />
       </DelayedComponent>
+
+      <RollDiceButton onClick={handleClick} />
     </div>
   )
 }

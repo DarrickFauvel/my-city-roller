@@ -1,10 +1,8 @@
 "use client"
-import React, { useEffect, useState } from "react"
 
-type DelayedComponentProps = {
-  timeoutValue: number
-  children: React.ReactNode
-}
+import { useEffect, useState } from "react"
+
+import { DelayedComponentProps } from "@/types"
 
 export default function DelayedComponent({
   timeoutValue,
@@ -28,11 +26,13 @@ export default function DelayedComponent({
             xmlns="http://www.w3.org/2000/svg"
             width="8em"
             height="8em"
-            viewBox="0 0 24 24">
+            viewBox="0 0 24 24"
+          >
             <path
               fill="currentColor"
               d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"
-              transform="matrix(0 0 0 0 12 12)">
+              transform="matrix(0 0 0 0 12 12)"
+            >
               <animateTransform
                 attributeName="transform"
                 calcMode="spline"

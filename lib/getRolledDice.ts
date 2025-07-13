@@ -1,9 +1,5 @@
+import { Die } from "@/types"
 import dice from "@/assets/data"
-
-type Die = {
-  name: string
-  faces: string[]
-}
 
 export default function getRolledDice() {
   const rollDie = (die: Die) => {

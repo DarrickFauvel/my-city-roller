@@ -1,9 +1,7 @@
 "use client"
-import { Button } from "@/components/ui/button"
 
-type ButtonProps = {
-  onClick: () => void
-}
+import { Button } from "@/components/ui/button"
+import { ButtonProps } from "@/types"
 
 export default function RollButton(props: ButtonProps) {
   return (

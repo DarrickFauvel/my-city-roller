@@ -13,7 +13,8 @@ export default function RollPage() {
     "building-shape-die-right": null,
     "building-type-die": null,
   })
-  const [rollCount, setRollCount] = useState(1)
+  // const [rollCount, setRollCount] = useState(1)
+  const [rollTrigger, setRollTrigger] = useState(0)
 
   useEffect(() => {
     async function setRolledDice() {
@@ -30,11 +31,10 @@ export default function RollPage() {
     }
 
     setRolledDice()
-    console.log(rollCount)
-  }, [rollCount])
+  }, [rollTrigger])
 
   const handleClick = () => {
-    setRollCount((prevRollCount) => prevRollCount + 1)
+    setRollTrigger((prev) => prev + 1)
   }
 
   return (

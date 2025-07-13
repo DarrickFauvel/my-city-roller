@@ -40,7 +40,7 @@ export default function RollPage() {
   return (
     <div className="flex flex-col items-center gap-8 pt-16 pb-8">
       <div className="flex gap-2">
-        <DelayedComponent timeoutValue={1000}>
+        <DelayedComponent timeoutValue={1000} key={`${rollTrigger}-1`}>
           <Die
             variant="building-shape"
             side="left"
@@ -48,7 +48,7 @@ export default function RollPage() {
           />
         </DelayedComponent>
 
-        <DelayedComponent timeoutValue={2000}>
+        <DelayedComponent timeoutValue={2000} key={`${rollTrigger}-2`}>
           <Die
             variant="building-shape"
             side="right"
@@ -57,7 +57,7 @@ export default function RollPage() {
         </DelayedComponent>
       </div>
 
-      <DelayedComponent timeoutValue={3000}>
+      <DelayedComponent timeoutValue={3000} key={`${rollTrigger}-3`}>
         <Die variant="building-type" face={dieFaces["building-type-die"]} />
       </DelayedComponent>
 

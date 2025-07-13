@@ -1,8 +1,9 @@
+import "./globals.css"
+
+import Footer from "@/components/footer"
+import Header from "@/components/header"
 import type { Metadata } from "next"
 import { Noto_Serif } from "next/font/google"
-import "./globals.css"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
 
 const noto_serif = Noto_Serif({ subsets: ["latin"] })
 
@@ -22,7 +23,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${noto_serif.className} prose relative bg-cyan-50 h-screen`}>
+      <body
+        className={`${noto_serif.className} prose relative bg-cyan-50 h-screen`}
+      >
         <div className="flex flex-col h-full">
           <Header
           // showDiceRolled={showDiceRolled}

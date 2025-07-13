@@ -11,3 +11,7 @@ export type Die = {
   name: string
   faces: string[]
 }
+
+export type OnClickProps = {
+  onClick: () => void
+}
